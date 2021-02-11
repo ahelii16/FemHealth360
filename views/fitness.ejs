@@ -3,22 +3,84 @@
 <main role="main">
 	<div class="container my-5 main-text">
 		<h1>Fitness</h1>
-		<p class="subtext"><%=currentUser.name%>, at your age you are most susceptible to suffering from:</p>
+		<p class="subtext dashboard-feature"><%=currentUser.name%>, at your age you are most susceptible to suffering from:</p>
 
-		<div class="disease">
-			<a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410"
-				>High blood pressure</a
-			><br />
-			<a href="https://www.healthline.com/health/diabetes/symptoms-in-women">Type 2 diabetes</a><br />
-			<a href="https://www.healthline.com/health/stroke/symptoms-of-stroke-in-women">Strokes</a><br />
-			<a href="https://www.mayoclinic.org/diseases-conditions/pcos/symptoms-causes/syc-20353439"
-				>Polycystic Ovary Syndrome</a
-			>
+		<div class="album py-5 bg-light">
+			<div class="container">
+				<div class="row">
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top" 
+							src="https://www.endocrineweb.com/sites/default/files/lead-images/article/63077-istock-1214110486.jpg" 
+							alt="pcos"
+							height="225">
+
+							<div class="card-body">
+								<p class="card-text">Polycystic Ovary Syndrome</p>
+							  	<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<a href="https://www.mayoclinic.org/diseases-conditions/pcos/symptoms-causes/syc-20353439" 
+										class="btn btn-sm btn-outline-secondary" 
+										role="button">
+											View
+									</a>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top" 
+							src="https://images.prismic.io/npf-website/571e6391-2f56-40dd-9626-ddd13cbaad95_psoriatic-arthritis-diabetes-risk.png" 
+							alt="diabetes"
+							height="225">
+
+							<div class="card-body">
+								<p class="card-text">Type 2 diabetes</p>
+							  	<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<a href="https://www.healthline.com/health/diabetes/symptoms-in-women"
+										class="btn btn-sm btn-outline-secondary" 
+										role="button">
+										View
+									</a>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="card mb-4 shadow-sm">
+							<img class="card-img-top" 
+							src="https://www.goredforwomen.org/-/media/grfw-images/know-your-risk/risk-factors/risk-factors-for-heart-disease-high-blood-pressure.png" 
+							alt="high-bp"
+							height="225">
+
+							<div class="card-body">
+								<p class="card-text">High Blood Pressure</p>
+							  	<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410" 
+										class="btn btn-sm btn-outline-secondary" 
+										role="button">
+											View
+									</a>
+								</div>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 
 		<p class="lead text-dark">
 			Apart from keeping a clean diet and healthy habits, <b>exercise</b> is the most beneficial.
-			<br />
+			<br>
 			Here are the best workout recommendations for you!
 		</p>
 
