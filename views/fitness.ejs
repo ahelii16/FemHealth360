@@ -1,0 +1,48 @@
+<%- include('partials/header.ejs') %>
+
+<main role="main">
+	<div class="container my-5 main-text">
+		<h1>Fitness</h1>
+		<p class="subtext"><%=currentUser.name%>, at your age you are most susceptible to suffering from:</p>
+
+		<div class="disease">
+			<a href="https://www.mayoclinic.org/diseases-conditions/high-blood-pressure/symptoms-causes/syc-20373410"
+				>High blood pressure</a
+			><br />
+			<a href="https://www.healthline.com/health/diabetes/symptoms-in-women">Type 2 diabetes</a><br />
+			<a href="https://www.healthline.com/health/stroke/symptoms-of-stroke-in-women">Strokes</a><br />
+			<a href="https://www.mayoclinic.org/diseases-conditions/pcos/symptoms-causes/syc-20353439"
+				>Polycystic Ovary Syndrome</a
+			>
+		</div>
+
+		<p class="lead text-dark">
+			Apart from keeping a clean diet and healthy habits, <b>exercise</b> is the most beneficial.
+			<br />
+			Here are the best workout recommendations for you!
+		</p>
+
+		<div class="iframe-container d-flex justify-content-center">
+			<iframe
+				src="https://www.youtube.com/embed/ESPWlnCIoaQ"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+			<iframe
+				src="https://www.youtube.com/embed/UItWltVZZmE"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+			<iframe
+				src="https://www.youtube.com/embed/510FdqCvZ-k"
+				frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen
+			></iframe>
+		</div>
+	</div>
+</main>
+
+<%- include('partials/footer.ejs') %>
