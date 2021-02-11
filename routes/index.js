@@ -3,6 +3,7 @@ const isAuthenticated = require('../middleware/isAuthenticated');
 const userRouter = require('./user');
 const mealPlanRouter = require('./mealPlan');
 const fitnessRouter = require('./fitness');
+const periodTrackerRouter = require('./periodTracker');
 
 const router = express.Router();
 
@@ -20,6 +21,7 @@ router.get('/dashboard', isAuthenticated, (req, res, next) => {
 router.use('/user', userRouter);
 router.use('/meal', mealPlanRouter);
 router.use('/fitness', fitnessRouter);
+router.use('/period-tracking', periodTrackerRouter);
 
 router.use('*', (req, res, next) => {
 	return res.render('404.ejs');

@@ -1,6 +1,8 @@
 const path = require('path');
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const MongoStore = require('connect-mongo')(session);
 const passport = require('passport');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
@@ -17,11 +19,14 @@ mongoose.connect(MONGODB, {
 });
 
 // authentication
-const expressSession = require('express-session')({
-	secret: SESSION_SECRET,
-	resave: false,
-	saveUninitialized: false
-});
+app.use(
+	session({
+		secret: SESSION_SECRET,
+		store: new MongoStore({ mongooseConnection: mongoose.connection }),
+		resave: false,
+		saveUninitialized: false
+	})
+);
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -29,7 +34,6 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressSession);
 app.use(flash());
 
 // Passport

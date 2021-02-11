@@ -1,0 +1,39 @@
+.jsCalendar tbody td.jsCalendar-colorful-yellow {
+	border-color: #ffe31b;
+	color: white;
+}
+
+.jsCalendar tbody td.jsCalendar-colorful-orange {
+	border-color: #ffb400;
+	background-color: #ffb400;
+	color: white;
+}
+
+.jsCalendar tbody td.jsCalendar-colorful-red {
+	background-color: #f6511d;
+	border-color: #f6511d;
+	color: white;
+}
+
+.jsCalendar.custom-color tbody td.jsCalendar-current {
+	/* background-color: #f6511d; */
+	background-color: #fff;
+	color: #000;
+}
+
+.jsCalendar.custom-color tbody td.jsCalendar-current:hover {
+	/* background-color: #f6511d; */
+	background-color: #e6e6e6;
+}
+
+.jsCalendar.custom-color tbody td:hover {
+	/* background-color: #f6511d; */
+	cursor: pointer;
+}
+
+.jsCalendar.custom-color *::selection {
+	background: #f6511d;
+}
+.jsCalendar.custom-color *::-moz-selection {
+	background: #f6511d;
+}
