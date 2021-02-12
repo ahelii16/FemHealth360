@@ -42,7 +42,7 @@
 
 ## How To Use
 
-The app has been hosted on (link).
+The app has been hosted on https://femhealth.herokuapp.com/.
 
 To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
 
