@@ -9,6 +9,9 @@
 	},
 	"author": "Aheli Ghosh",
 	"license": "ISC",
+	"engines": {
+		"node": "12.19.0"
+	},
 	"dependencies": {
 		"axios": "^0.21.1",
 		"bcrypt-nodejs": "0.0.3",
