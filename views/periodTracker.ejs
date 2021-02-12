@@ -3,14 +3,46 @@
 <main role="main">
 	<div class="container my-5">
 		<h1>Period Tracker</h1>
-		<p class="subtext text-center">Track your period by clicking on the calendar dates.</p>
+		<p class="subtext text-center mb-5">Track your period by clicking on the calendar dates.</p>
 
-		<div class="d-flex align-items-center flex-column">
-			<div class="d-flex jutify-content-center">
-				<div>Normal <span class="low-flow"></span></div>
-				<div>Heavy <span class="heavy-flow"></span></div>
+		<div class="row">
+			<div class="col-lg-4 offset-lg-2 col-sm-12">
+				<div class="d-flex align-items-center flex-column">
+					<div class="d-flex justify-content-center">
+						<div class="mr-5">Normal flow <span class="low-flow"></span></div>
+						<div>Heavy flow <span class="heavy-flow"></span></div>
+					</div>
+					<div id="my-calendar" class="custom-color"></div>
+				</div>
 			</div>
-			<div id="my-calendar" class="custom-color"></div>
+			<div class="col-lg-6 col-sm-12">
+				<div class="d-flex flex-column align-items-center justify-content-center">
+					<div class="product-recommendation card period-tracker-card">
+						<div class="card-body period-due">
+							<h5 class="card-title">Stay one step ahead!</h5>
+							<p class="card-text">
+								Your next period is expected to be on <span id="period-due-date"></span>. Check out these products.
+							</p>
+							<a
+								href="https://www.bing.com/shop?q=whisper&qs=n&form=SHOPSB&sp=-1&pq=whisp&sc=8-5&sk=&cvid=D359F10DC824461F81550880A076CD16"
+								target="_blank"
+								class="btn btn-primary"
+							>
+								Products
+							</a>
+						</div>
+					</div>
+					<div class="flow-warning card bg-warning period-tracker-card">
+						<div class="card-body period-due">
+							<h5 class="card-title">Warning</h5>
+							<p class="card-text">
+								<%=currentUser.name%>, you have recorded more than 5 days of heavy flow in the last 2 months. You may
+								want to get tested for menorrhagia, fibroids and anemia!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </main>
@@ -18,7 +50,7 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-				<h5 class="modal-title">Add Period Flow</h5>
+				<h6 class="modal-title">Add Period Flow</h6>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>

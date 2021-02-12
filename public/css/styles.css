@@ -137,3 +137,19 @@ h1 {
     margin-bottom: auto;
     padding: 1rem;
 }
+
+.low-flow,
+.heavy-flow {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+}
+
+.low-flow {
+	background-color: #ffb400;
+}
+
+.heavy-flow {
+	background-color: #f6511d;
+}

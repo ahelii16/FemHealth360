@@ -9,12 +9,11 @@ $(document).ready(function () {
 	};
 	date_input.datepicker(options);
 
-	function getLastNDates(n) {
-		var date = moment();
+	function getNPreviousDates(startDate, n) {
 		var dates = [];
 
 		for (var i = 1; i <= n; i++) {
-			dates.push(date.subtract(1, 'day').format('DD/MM/YYYY'));
+			dates.push(moment(startDate).subtract(i, 'day').format('DD/MM/YYYY'));
 		}
 
 		return dates;
@@ -98,16 +97,18 @@ $(document).ready(function () {
 		};
 
 		var myCalendar = jsCalendar.new(calendarDiv);
-		var filledDates = getLastNDates(3);
+		var today = moment();
+		var currentDates = getNPreviousDates(moment(today), 3);
+		var lastMonthDates = getNPreviousDates(moment(today).subtract(28, 'day'), 5);
+		var predictionDate = moment(today).add(28, 'day').format('DD/MM/YYYY');
 		var selectedDate = null;
 
-		myCalendar.colorfulSelect(filledDates, 'jsCalendar-colorful-red');
+		myCalendar.colorfulSelect(currentDates, 'jsCalendar-colorful-red');
+		myCalendar.colorfulSelect(lastMonthDates.slice(0, 3), 'jsCalendar-colorful-red');
+		myCalendar.colorfulSelect(lastMonthDates.slice(3, 5), 'jsCalendar-colorful-orange');
+		myCalendar.colorfulSelect(predictionDate, 'jsCalendar-colorful-yellow');
 
 		myCalendar.onDateClick(function (event, date) {
-			if (myCalendar.isSelected(date)) {
-				return;
-			}
-
 			selectedDate = date;
 
 			$('#periodModal').modal(options);
@@ -122,5 +123,7 @@ $(document).ready(function () {
 
 			$('#periodModal').modal('toggle');
 		});
+		console.log($('#period-due-date'));
+		$('#period-due-date').text(moment(today).add(28, 'day').format('LL'));
 	}
 });
