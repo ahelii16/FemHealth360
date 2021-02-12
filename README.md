@@ -6,6 +6,9 @@
   FemHealth360
   <br>
 </h1>
+<h3 align="center">
+  <a href="https://femhealth.herokuapp.com/" target="_blank">https://femhealth.herokuapp.com/</a>
+</h3>
 
 <h4 align="center">A one stop destination for all about women's healthcare. </h4>
 
@@ -25,9 +28,10 @@
 
 <p align="center">
   <a href="#key-features">Key Features</a> •
-  <a href="#how-to-use">How To Use</a> •
+  <a href="#technologies-and-apis-used">Technologies and APIs Used</a> •
+  <a href="#demo">Demo</a> •
   <a href="#future-work">Future Work</a> •
-  <a href="#credits">Credits</a> 
+  <a href="#how-to-use">How To Use</a>  
 </p>
 <!-- 
 ![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
@@ -40,11 +44,29 @@
 * Recommends the best workout videos to burn calories and stay fit according to your lifestyle.
 * Ready for web and mobile.
 
+## Technologies and APIs Used
+
+The app has been hosted on Heroku along with MongoDB Atlas cloud cluster for database. You can visit the app here: [https://femhealth.herokuapp.com/](https://femhealth.herokuapp.com/)
+
+- ExpressJS
+- NodeJS
+- Bootstrap
+- MongoDB 
+- JQuery
+- [Spoonacular API](https://spoonacular.com/food-api/docs#Generate-Meal-Plan)
+- [jsCalendar](https://gramthanos.github.io/jsCalendar/index.html)
+
+## Demo
+
+## Future Work:
+
+ - A chatbot to address specific health concerns that the user may have, and redirect them to doctors and resources.
+ - To send realtime alerts for medical tests, breast self examination and period care.
+ - Implement community forum to connect women with doctors and other users.
+
 ## How To Use
 
-The app has been hosted on https://femhealth.herokuapp.com/.
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. Before starting, make a .env file and add your private keys (use the example.env file as a template). From your command line:
 
 ```bash
 # Clone this repository
@@ -62,19 +84,6 @@ $ npm start
 
 Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
 
-
-## Future Work:
-
- - A chatbot to address specific health concerns that the user may have, and redirect them to doctors and resources.
- - Collect calendar data across various users and use machine learning techniques to customize predicted diseases more appropriately.
- - Implement community forum to connect women with doctors and other users.
-
-## Credits
-
-This software uses the following APIs/ libraries:
-
-- [Spoonacular API](https://spoonacular.com/food-api/docs#Generate-Meal-Plan)
-- [jsCalendar](https://gramthanos.github.io/jsCalendar/index.html)
 
 ---
 

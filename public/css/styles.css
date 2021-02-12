@@ -52,17 +52,15 @@ h1 {
 	margin-bottom: 2rem;
 }
 
-/* Carousel base class */
 .carousel {
 	margin-bottom: 4rem;
 }
-/* Since positioning the image, we need to help out the caption */
+
 .carousel-caption {
 	bottom: 3rem;
 	z-index: 10;
 }
 
-/* Declare heights because of positioning of img element */
 .carousel-item {
 	height: 32rem;
 }
@@ -74,7 +72,6 @@ h1 {
 	height: 32rem;
 }
 
-/* Center align the text within the three columns below the carousel */
 .marketing .col-lg-4 {
 	margin-bottom: 1.5rem;
 	text-align: center;

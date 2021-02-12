@@ -18,11 +18,13 @@ router.get('/dashboard', isAuthenticated, (req, res, next) => {
 	return res.render('dashboard');
 });
 
+// Register all routes
 router.use('/user', userRouter);
 router.use('/meal', mealPlanRouter);
 router.use('/fitness', fitnessRouter);
 router.use('/period-tracking', periodTrackerRouter);
 
+// Not found route (404)
 router.use('*', (req, res, next) => {
 	return res.render('404.ejs');
 });

@@ -13,12 +13,13 @@ const { MONGODB, SESSION_SECRET } = require('./config/secrets');
 
 const app = express();
 
+// Connect to MongoDB database
 mongoose.connect(MONGODB, {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
 
-// authentication
+// Setup sessions
 app.use(
 	session({
 		secret: SESSION_SECRET,
@@ -28,6 +29,7 @@ app.use(
 	})
 );
 
+// Setup EJS as view engine.
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
@@ -36,7 +38,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(flash());
 
-// Passport
+// Passport setup
 require('./config/passport');
 app.use(passport.initialize());
 app.use(passport.session());

@@ -39,6 +39,7 @@ const AGE_CALORIE_MAP = {
 	}
 };
 
+// Return target calories based on age and activity level
 function getTargetCalories(age, activeness) {
 	if (age >= 1 && age <= 3) {
 		return AGE_CALORIE_MAP['baby'][activeness];
@@ -57,6 +58,7 @@ function getTargetCalories(age, activeness) {
 	}
 }
 
+// Function to get meal plan from Spoonacular API
 async function getMealPlan(age, activeness, diet) {
 	try {
 		const targetCalories = getTargetCalories(age, activeness);
@@ -67,8 +69,43 @@ async function getMealPlan(age, activeness, diet) {
 
 		return res.data;
 	} catch (err) {
-		console.log(err);
-		return {};
+		// Because the free tier of spoonacular has very less monthly requests allowed
+		// We are returning a response here in case the API limit is reached in deployed website
+		return {
+			meals: [
+				{
+					id: 746307,
+					imageType: 'jpeg',
+					title: 'Oatmeal Chocolate-Chip Peanut-Butter Banana Breakfast Cookies',
+					readyInMinutes: 20,
+					servings: 12,
+					sourceUrl:
+						'http://www.foodnetwork.com/recipes/oatmeal-chocolate-chip-peanut-butter-banana-breakfast-cookies.html'
+				},
+				{
+					id: 1119090,
+					imageType: 'jpg',
+					title: 'Chicken Ramen Stir Fry',
+					readyInMinutes: 25,
+					servings: 4,
+					sourceUrl: 'https://www.jocooks.com/recipes/chicken-ramen-stir-fry/'
+				},
+				{
+					id: 1063181,
+					imageType: 'jpeg',
+					title: 'Easy Party Tartlets',
+					readyInMinutes: 30,
+					servings: 12,
+					sourceUrl: 'https://hedihearts.com/easy-party-tartlets-recipe/'
+				}
+			],
+			nutrients: {
+				calories: 1200.02,
+				protein: 58.4,
+				fat: 65.43,
+				carbohydrates: 106.13
+			}
+		};
 	}
 }
 
