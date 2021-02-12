@@ -33,8 +33,6 @@
   <a href="#future-work">Future Work</a> •
   <a href="#how-to-use">How To Use</a>  
 </p>
-<!-- 
-![screenshot](https://raw.githubusercontent.com/amitmerchant1990/electron-markdownify/master/app/img/markdownify.gif) -->
 
 ## Key Features
 
@@ -57,6 +55,8 @@ The app has been hosted on Heroku along with MongoDB Atlas cloud cluster for dat
 - [jsCalendar](https://gramthanos.github.io/jsCalendar/index.html)
 
 ## Demo
+
+[![Watch the video](https://youtu.be/fSvVqxa9S5c/maxresdefault.jpg)](https://youtu.be/fSvVqxa9S5c)
 
 ## Future Work:
 
