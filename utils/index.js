@@ -64,7 +64,7 @@ async function getMealPlan(age, activeness, diet) {
 		const targetCalories = getTargetCalories(age, activeness);
 
 		const res = await axios.get(
-			`https://api.spoonacular.com/mealplanner/generate?timeFrame=day&?diet=${diet}&targetCalories=${targetCalories}&apiKey=${SPOONACULAR_KEY}`
+			`https://api.spoonacular.com/mealplanner/generate?timeFrame=day&diet=${diet}&targetCalories=${targetCalories}&apiKey=${SPOONACULAR_KEY}`
 		);
 
 		return res.data;
